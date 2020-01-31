@@ -23,7 +23,13 @@ vim /etc/my.cnf
 slow-query-log = 1
 slow-query-log-file=/var/lib/mysql/localhost-slow.log
 ```
+```
+if you want to create new path for slow query log then give access to mysql and change permission
+      cd /var/log/mysql
+      chown -R mysql:mysql localhost-slow.log 
+      chmod 640 localhost-slow.log 
 
+```
 systemctl restart mysqld
 
 ```
